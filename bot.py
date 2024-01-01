@@ -128,7 +128,7 @@ async def main(bot: Client, message: Message):
                                      disable_web_page_preview=True)
             return
 
-        if user not in Config.AUTH_USERS:
+        if (message.from_user.id) not in Config.AUTH_USERS:
             return
 
         await message.reply_text(
