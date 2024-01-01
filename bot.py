@@ -128,8 +128,6 @@ async def main(bot: Client, message: Message):
                                      disable_web_page_preview=True)
             return
 
-        if (message.from_user.id) not in Config.AUTH_USERS:
-            return
 
         await message.reply_text(
             text="**Choose an option To Upload Your Files**",
