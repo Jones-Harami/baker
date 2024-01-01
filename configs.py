@@ -13,7 +13,7 @@ class Config(object):
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://jonesdee2k:gdj132549s@cluster0.1qnajcm.mongodb.net/?retryWrites=true&w=majority")
   LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1002004055044")
   BANNED_USERS = set(int(x) if id_pattern.search(x) else x for x in os.environ.get('BANNED_USERS', '').split())
-  FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
+  FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", False))
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
   BANNED_CHAT_IDS = list(set(int(x) if id_pattern.search(x) else x for x in os.environ.get('BANNED_CHAT_IDS', '').split()))
   AUTH_USERS = [int(auth_users) if id_pattern.search(auth_users) else auth_users for auth_users in os.environ.get('AUTH_USERS', '6934250556 1825185800').split()]
