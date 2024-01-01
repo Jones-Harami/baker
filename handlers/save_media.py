@@ -43,7 +43,7 @@ async def forward_to_channel(bot: Client, message: Message, editable: Message):
         return await forward_to_channel(bot, message, editable)
 
 
-async def save_batch_media_in_channel(bot: Client, editable: Message, message_ids: list, cmd):
+async def save_batch_media_in_channel(bot: Client, editable: Message, message_ids, cmd):
     try:
         message_ids_str = ""
         for message in (await bot.get_messages(chat_id=editable.chat.id, message_ids=message_ids)):
